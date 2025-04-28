@@ -1,0 +1,46 @@
+{
+    "name": "selfiens/array2",
+    "description": "A fluent array utility",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kita"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.47",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Selfiens\\Array2\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Selfiens\\Array2\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    },
+    "scripts": {
+        "post-package-install": [
+            "composer normalize"
+        ],
+        "post-package-uninstall": [
+            "composer normalize"
+        ],
+        "phpstan": "@php vendor/bin/phpstan analyze | tee last-phpstan.txt",
+        "phpstan-baseline": "@php vendor/bin/phpstan analyze --generate-baseline",
+        "phpunit": "@php vendor/bin/phpunit -c ./phpunit.xml | tee last-unit-test.txt",
+        "rector": "@php vendor/bin/rector process --ansi"
+    }
+}
