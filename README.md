@@ -4,6 +4,8 @@
 [![Total Downloads](https://poser.pugx.org/selfiens/array2/downloads)](//packagist.org/packages/selfiens/array2)
 [![License](https://poser.pugx.org/selfiens/array2/license)](//packagist.org/packages/selfiens/array2)
 
+https://github.com/selfiens/php-array2
+
 A simple, immutable array helper class for PHP. It wraps PHP's native `ArrayObject` to provide convenient, chainable methods for common array operations, without modifying the original array.
 
 ## Key Features
